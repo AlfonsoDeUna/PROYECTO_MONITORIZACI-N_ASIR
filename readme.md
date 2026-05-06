@@ -64,19 +64,13 @@ Acceso sudo
 ``` bash
 npm start
 ```
-Probar
-
-Desde el propio servidor:
-``` bash
-
-bashcurl -I http://localhost:3000/login
-```
+Probar:
 
 Desde otro equipo de la red abrir en el navegador:
 http://IP_DEL_SERVIDOR:3000
-Login con admin / 1234.
+**Login con admin / 1234.**
 
-Apagar
+Apagar:
 Si está en primer plano: Ctrl + C.
 
 
