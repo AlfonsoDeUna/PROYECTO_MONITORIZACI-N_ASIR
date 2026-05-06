@@ -66,48 +66,54 @@ npm start
 ```
 Probar
 
-``` bash
 Desde el propio servidor:
+``` bash
+
 bashcurl -I http://localhost:3000/login
+```
+
 Desde otro equipo de la red abrir en el navegador:
 http://IP_DEL_SERVIDOR:3000
 Login con admin / 1234.
-5. Apagar
+
+Apagar
 Si está en primer plano: Ctrl + C.
-Si lo montaste como servicio systemd:
-bashsudo systemctl stop proyecto-login
-sudo systemctl disable proyecto-login
-```
-
-#### Opción B — Despliegue con Docker Compose
 
 
-APP_PORT=3000
-SESSION_SECRET=cambia_esta_clave_en_produccion
-2. Levantar los contenedores
+#### Opción B — Despliegue con Docker Compose PUERTO 3010
+
+Levantar los contenedores
 Desde la raíz del proyecto:
 
 ```bash
 docker compose up -d --build
+```
 
-5. Ver logs
-bash# Logs de toda la pila
+Ver logs
+
+```bash
+# Logs de toda la pila
 docker compose logs -f
-
-# Solo de un servicio
 docker compose logs -f app
 docker compose logs -f db
+```
+Apagar
 
-6. Apagar
 Detener sin borrar datos:
+```bash
 docker compose stop
+```
 Volver a arrancar:
+```bash
 docker compose start
+```
 Detener y eliminar contenedores (los datos persisten en el volumen):
+```bash
 docker compose down
+```
 Detener y eliminar TODO, incluidos los datos de la base de datos:
+```bash
 docker compose down -v
-
 ```
 
 ## Funcionamiento de la aplicación
@@ -121,12 +127,7 @@ Redirige a /tabla, que está protegida por el middleware requiereLogin.
 La página /tabla consulta ensamblaje_a320 y muestra el estado de cada MSN en su estación.
 El enlace Cerrar sesión destruye la sesión y vuelve al login.
 
-Estaciones del A320 representadas en los datos
-EstaciónFaseStation 40Unión de las secciones de fuselajeStation 35Cableado eléctrico y sistemas hidráulicosStation 30Montaje de alas al fuselajeStation 18Instalación de motores CFM LEAP-1AStation 17Power-on y pruebas en tierra
-Plantas de ensamblaje final del A320: Hamburgo, Toulouse, Tianjin y Mobile.
 
-
-
-Licencia y autoría
+# Licencia y autoría
 Material docente elaborado para los ciclos de DAW y ASIR.
 Uso académico libre con atribución.
