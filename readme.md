@@ -24,6 +24,8 @@ Descarga de la VM: Enlace en Google Drive https://drive.google.com/file/d/1v1vkR
 Importable en VirtualBox. Trae instalado Node.js, Docker, Docker Compose y MariaDB, Nginx.
 
 ## Estructura del repositorio
+
+``` bash
 proyecto-login/
 │
 ├── README.md                      ← este archivo
@@ -51,6 +53,8 @@ proyecto-login/
 └── db/
     └── init.sql                   ← script de inicialización de MariaDB
                                      (crea tablas e inserta datos de ejemplo)
+```
+
 ## Despliegue
 #### Opción A — Despliegue tradicional en Ubuntu Server
 
